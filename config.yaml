@@ -1,0 +1,125 @@
+# Configuration for Fraud Detection Pipeline
+# All hyperparameters, costs, and paths in one place
+
+# Data
+data:
+  raw_path: "data/raw/indian_transactions.csv"
+  test_size: 0.2
+  random_state: 1
+  target_column: "is_fraud"
+
+# Preprocessing
+preprocessing:
+  drop_columns:
+    - "trans_datetime"
+    - "trans_date"
+    - "trans_time"
+    - "cc_num"
+    - "cardholder_name"
+    - "dob"
+    - "upi_id"
+    - "trans_num"
+    - "fraud_reason"
+  categorical_columns:
+    - "gender"
+    - "job"
+    - "state"
+    - "merchant"
+    - "category"
+    - "payment_method"
+  datetime_column: "trans_datetime"
+  extract_features:
+    - "hour"
+    - "day_of_week"
+  one_hot_drop_first: true
+  scale_features: true
+
+# Model hyperparameters
+models:
+  logistic_regression:
+    class_weight: "balanced"
+    max_iter: 1000
+    random_state: 1
+    solver: "lbfgs"
+  
+  random_forest:
+    class_weight: "balanced"
+    n_estimators: 200
+    max_depth: null
+    min_samples_split: 5
+    min_samples_leaf: 2
+    random_state: 1
+    n_jobs: -1
+  
+  xgboost:
+    n_estimators: 300
+    max_depth: 5
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    scale_pos_weight: "auto"  # calculated from data
+    random_state: 1
+    n_jobs: -1
+    eval_metric: "logloss"
+    calibrate: true
+    calibration_method: "isotonic"
+    calibration_cv: 3
+
+# Cross-validation
+cv:
+  enabled: true
+  n_splits: 5
+  shuffle: true
+  random_state: 1
+  scoring:
+    - "roc_auc"
+    - "average_precision"
+
+# Cost-sensitive threshold optimization
+costs:
+  c_fn: 10000  # Cost of false negative (missed fraud)
+  c_fp: 500    # Cost of false positive (false alarm)
+  # Cost ratio = 20:1
+
+# Threshold optimization
+threshold:
+  min_threshold: 0.01
+  max_threshold: 0.99
+  step: 0.01
+  strategies:
+    - "default"      # 0.5
+    - "f1_optimal"   # maximizes F1
+    - "cost_optimal" # minimizes total cost
+
+# SHAP explainability
+shap:
+  enabled: true
+  sample_size: 1000
+  max_display: 15
+  random_state: 42
+  plot_types:
+    - "summary"
+    - "bar"
+    - "waterfall"
+
+# Output paths
+output:
+  models_dir: "models"
+  figures_dir: "reports/figures"
+  processed_dir: "data/processed"
+  powerbi_dir: "data/powerbi"
+  logs_dir: "logs"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/pipeline.log"
+
+# Power BI export
+powerbi:
+  enabled: true
+  annual_transactions: 60000000  # 60M per year
+  export_formats:
+    - "csv"
+    - "parquet"

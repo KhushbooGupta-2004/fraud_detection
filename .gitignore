@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+
+# Data (not committed)
+data/raw/*.csv
+data/raw/*.parquet
+data/processed/
+
+# Models (not committed)
+models/*.joblib
+models/*.pkl
+
+# Logs
+logs/*.log
+
+# Reports (generated)
+reports/figures/*.png
+reports/figures/*.csv
+reports/figures/*.parquet
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*
+!.env.example
+
+# Markdown files (keep only the root README)
+*.md
+!README.md

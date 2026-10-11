@@ -1,0 +1,61 @@
+feature_key,model_name,feature_name,shap_importance,importance_rank
+1,Logistic Regression,state_Maharashtra,0.0825117593054252,1
+2,Logistic Regression,state_Karnataka,0.0635523298166761,2
+3,Logistic Regression,state_Gujarat,0.0591410610616773,3
+4,Logistic Regression,category_travel,0.0340309640379184,4
+5,Logistic Regression,category_shopping,0.0337191186110413,5
+6,Logistic Regression,gender_M,0.0315644833713256,6
+7,Logistic Regression,job_Manager,0.0302785747616415,7
+8,Logistic Regression,merchant_Flipkart,0.0238247865226721,8
+9,Logistic Regression,age,0.0230305781375074,9
+10,Logistic Regression,job_Teacher,0.0230185218871861,10
+11,Logistic Regression,day_of_week,0.0213681549133454,11
+12,Logistic Regression,payment_method_Debit Card,0.0193281272989056,12
+13,Logistic Regression,payment_method_Net Banking,0.014454665893445,13
+14,Logistic Regression,category_grocery,0.0093461858276395,14
+15,Logistic Regression,job_Engineer,0.0089054652902405,15
+16,Logistic Regression,merchant_Reliance,0.0016430737839592,16
+17,Logistic Regression,amt_inr,0.0005256261262024,17
+18,Logistic Regression,hour,0.000322078432691,18
+19,Logistic Regression,payment_method_UPI,3.681648248728877e-06,19
+20,Logistic Regression,merchant_BigBasket,0.0,20
+21,Random Forest,amt_inr,0.0885523574078059,1
+22,Random Forest,age,0.0754671477413444,2
+23,Random Forest,hour,0.0654465095123964,3
+24,Random Forest,day_of_week,0.0459357031460096,4
+25,Random Forest,state_Maharashtra,0.0188214100926948,5
+26,Random Forest,category_grocery,0.0179383144166306,6
+27,Random Forest,gender_M,0.0165162848207917,7
+28,Random Forest,payment_method_Debit Card,0.0142369974603844,8
+29,Random Forest,category_shopping,0.0140910388223699,9
+30,Random Forest,state_Karnataka,0.0140746223812906,10
+31,Random Forest,state_Gujarat,0.0135644322559721,11
+32,Random Forest,job_Teacher,0.0133285420842654,12
+33,Random Forest,merchant_Flipkart,0.0128876038515895,13
+34,Random Forest,merchant_BigBasket,0.0121283757448376,14
+35,Random Forest,job_Engineer,0.0118737308196087,15
+36,Random Forest,merchant_Reliance,0.0113948350789937,16
+37,Random Forest,payment_method_UPI,0.0109191755968564,17
+38,Random Forest,payment_method_Net Banking,0.010800012275257,18
+39,Random Forest,job_Manager,0.0100764046030249,19
+40,Random Forest,category_travel,0.0098247858574829,20
+41,Xgboost,amt_inr,1.7398039,1
+42,Xgboost,age,1.2136468,2
+43,Xgboost,hour,1.1313368,3
+44,Xgboost,day_of_week,0.5752432,4
+45,Xgboost,category_shopping,0.36656788,5
+46,Xgboost,state_Maharashtra,0.31684673,6
+47,Xgboost,gender_M,0.27814278,7
+48,Xgboost,state_Karnataka,0.2427631,8
+49,Xgboost,job_Teacher,0.22723962,9
+50,Xgboost,job_Engineer,0.20375016,10
+51,Xgboost,merchant_Reliance,0.1665859,11
+52,Xgboost,job_Manager,0.16086164,12
+53,Xgboost,merchant_BigBasket,0.15795639,13
+54,Xgboost,state_Gujarat,0.14675306,14
+55,Xgboost,payment_method_UPI,0.14655642,15
+56,Xgboost,payment_method_Net Banking,0.1428867,16
+57,Xgboost,payment_method_Debit Card,0.13262518,17
+58,Xgboost,category_grocery,0.13124768,18
+59,Xgboost,category_travel,0.10811453,19
+60,Xgboost,merchant_Flipkart,0.107196845,20

@@ -1,0 +1,2 @@
+total_transactions,fraud_count,legit_count,fraud_rate,class_imbalance_ratio,best_model,best_model_f1,optimal_threshold,test_set_savings_rs,savings_per_10k_rs,annual_projection_rs,annual_projection_crore,cost_fn,cost_fp,cost_ratio
+1000,18,982,0.018,54:1,Logistic Regression,0.041,0.89,116000,1160000.0,6960000000.0,696.0,10000,500,20

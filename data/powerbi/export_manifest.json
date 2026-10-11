@@ -1,0 +1,38 @@
+{
+  "exported_at": "2026-10-05T15:28:12.637541",
+  "tables": {
+    "FactTransactions": {
+      "path": "data\\powerbi\\FactTransactions.parquet",
+      "rows": 1000
+    },
+    "DimModel": {
+      "path": "data\\powerbi\\DimModel.csv",
+      "rows": 3
+    },
+    "DimThreshold": {
+      "path": "data\\powerbi\\DimThreshold.parquet",
+      "rows": 297
+    },
+    "DimFeature": {
+      "path": "data\\powerbi\\DimFeature.csv",
+      "rows": 60
+    },
+    "BusinessKPIs": {
+      "path": "data\\powerbi\\BusinessKPIs.csv",
+      "rows": 1
+    },
+    "ConfusionMatrices": {
+      "path": "data\\powerbi\\ConfusionMatrices.csv",
+      "rows": 9
+    },
+    "ModelPredictions": {
+      "path": "data\\powerbi\\ModelPredictions.parquet",
+      "rows": 3000
+    }
+  },
+  "config_summary": {
+    "cost_fn": 10000,
+    "cost_fp": 500,
+    "annual_transactions": 60000000
+  }
+}

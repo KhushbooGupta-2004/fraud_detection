@@ -1,0 +1,4 @@
+model_key,model_name,model_type,calibrated,roc_auc,pr_auc
+1,Logistic Regression,Linear,False,0.5157,0.0217
+2,Random Forest,Ensemble,False,0.5242,0.074
+3,XGBoost,Boosting,True,0.4915,0.0286

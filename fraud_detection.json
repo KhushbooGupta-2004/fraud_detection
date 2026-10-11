@@ -1,0 +1,14 @@
+{
+  "name": "Fraud Detection",
+  "dataColors": [
+    "#0066CC",
+    "#E74C3C",
+    "#27AE60",
+    "#F39C12",
+    "#64748B",
+    "#8E44AD"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#243447",
+  "tableAccent": "#0066CC"
+}
